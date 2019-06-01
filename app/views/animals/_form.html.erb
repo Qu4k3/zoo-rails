@@ -10,11 +10,29 @@
       </ul>
     </div>
   <% end %>
+  
 
-  <%= form.label :animal_photo do %>
-    <%= form.file_field :animal_photo %>  
-    <%= form.hidden_field :animal_photo_cache %>  
+
+  <% if animal.animal_photo.present? %>
+
+    <%= image_tag(animal.animal_photo.url, height: 200) %>
+
+    <div class="form-group">
+
+      <%= form.label :remove_animal_photo, style: "display: inline" %>
+
+      <%= form.check_box :remove_animal_photo %>
+
+    </div>
+
   <% end %>
+  
+  <div class="field">
+    <%= form.file_field :animal_photo %>
+
+    <%= form.hidden_field :animal_photo_cache %>
+  </div>
+
 
   <div class="field">
     <%= form.label :name %>
