@@ -30,3 +30,9 @@ th, td {
 .nav>li>a:focus {
   color: #fff;
 }
+
+.btn-primary,
+.btn-danger,
+.btn-success {
+  color: #fff !important;
+}

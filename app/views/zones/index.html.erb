@@ -20,9 +20,9 @@
         <td><%= zone.weather %></td>
         <td><%= zone.temperature %></td>
         <td><%= zone.humidity %></td>
-        <td><%= link_to 'Show', zone %></td>
-        <td><%= link_to 'Edit', edit_zone_path(zone) %></td>
-        <td><%= link_to 'Destroy', zone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', zone, class: "btn btn-default" %></td>
+        <td><%= link_to 'Edit', edit_zone_path(zone), class: "btn btn-primary" %></td>
+        <td><%= link_to 'Destroy', zone, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Zone', new_zone_path %>
+<%= link_to 'New Zone', new_zone_path, class: "btn btn-success" %>
