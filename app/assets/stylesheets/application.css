@@ -36,3 +36,7 @@ th, td {
 .btn-success {
   color: #fff !important;
 }
+
+.create-new {
+  float: right;
+}

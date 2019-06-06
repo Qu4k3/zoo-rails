@@ -1,24 +1,23 @@
-# README
+# Practica
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Notas
 
-Things you may want to cover:
+```
+rails g scaffold Zone name:string weather:string temperature:integer humidity:integer
 
-* Ruby version
+rails g scaffold Animal name:string breed:string zone:zone year_birth:integer
+```
 
-* System dependencies
+## Enlaces de interés
 
-* Configuration
+AJAX CRUD
+<br>
+[https://richonrails.com/articles/basic-ajax-in-ruby-on-rails](https://richonrails.com/articles/basic-ajax-in-ruby-on-rails)
 
-* Database creation
+API ligera
+<br>
+[https://github.com/paweljw/bookstore-backend/blob/part-3/config/routes.rb](https://github.com/paweljw/bookstore-backend/blob/part-3/config/routes.rb)
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Search con AJAX
+<br>
+[http://railscasts.com/episodes/240-search-sort-paginate-with-ajax?autoplay=true](http://railscasts.com/episodes/240-search-sort-paginate-with-ajax?autoplay=true)
