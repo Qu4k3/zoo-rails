@@ -12,6 +12,7 @@ class AnimalsController < ApplicationController
   # GET /animals/1
   # GET /animals/1.json
   def show
+    @animal = Animal.find(params[:id])
   end
 
   # GET /animals/new
@@ -21,12 +22,14 @@ class AnimalsController < ApplicationController
 
   # GET /animals/1/edit
   def edit
+    @animal = Animal.find(params[:id])
   end
 
   # POST /animals
   # POST /animals.json
   def create
-    @animal = Animal.new(animal_params)
+    @animal = Animal.all
+    @animal = Animal.create(animal_params)
     # @animal.zone = Zone.find_by_name(@animal.zone)
 
     respond_to do |format|
@@ -43,6 +46,11 @@ class AnimalsController < ApplicationController
   # PATCH/PUT /animals/1
   # PATCH/PUT /animals/1.json
   def update
+    @animals = Animal.all
+    @animal = Animal.find(params[:id])
+
+    @animal.update_attributes(animal_params)
+
     respond_to do |format|
       if @animal.update(animal_params)
         format.html { redirect_to @animal, notice: 'Animal was successfully updated.' }
@@ -54,9 +62,15 @@ class AnimalsController < ApplicationController
     end
   end
 
+  def delete
+    @animal = Animal.find(params[:product_id])
+  end
+
   # DELETE /animals/1
   # DELETE /animals/1.json
   def destroy
+    @animals = Animal.all
+    @animal = Animal.find(params[:id])
     @animal.destroy
     respond_to do |format|
       format.html { redirect_to animals_url, notice: 'Animal was successfully destroyed.' }

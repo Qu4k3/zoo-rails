@@ -1,0 +1,13 @@
+
+    <% @animals.each do |animal| %>
+      <tr>
+        <td><img src="<%= animal.animal_photo.url %>", height="200"></td> 
+        <td><%= animal.name %></td>
+        <td><%= animal.breed %></td>
+        <td><%= animal.zone.name %></td>
+        <td><%= animal.year_birth %></td>
+        <td><%= link_to 'Show', animal, class: "btn btn-default" %></td>
+        <td><%= link_to 'Edit', edit_animal_path(animal), remote: true, class: "btn btn-primary" %></td>
+        <td><%= link_to 'Delete', animal_delete_path(animal), remote: true, class: "btn btn-danger" %></td>
+      </tr>
+    <% end %>
