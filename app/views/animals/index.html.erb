@@ -2,6 +2,15 @@
 
 <h1>Animals</h1>
 
+<%= form_tag animals_path, :method => 'get', :id => "animals_search" do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
+<br>
+
 <table>
   <thead>
     <tr>

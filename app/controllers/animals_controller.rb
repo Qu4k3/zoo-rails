@@ -1,10 +1,12 @@
+# http://railscasts.com/episodes/240-search-sort-paginate-with-ajax?autoplay=true
+
 class AnimalsController < ApplicationController
   before_action :set_animal, only: [:show, :edit, :update, :destroy]
 
   # GET /animals
   # GET /animals.json
   def index
-    @animals = Animal.all
+    @animals = Animal.search(params[:search])
   end
 
   # GET /animals/1

@@ -11,4 +11,12 @@ class Animal < ApplicationRecord
   validates_integrity_of :animal_photo
   validates_processing_of :animal_photo
   validates :animal_photo, file_size: { less_than: 5.megabytes }
+
+  def self.search(search)
+    if search
+      where('name LIKE ?', "%#{search}%")
+    else
+      all
+    end
+  end
 end
