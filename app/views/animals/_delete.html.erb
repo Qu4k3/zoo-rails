@@ -5,10 +5,10 @@
   </div>
   <div class="modal-body">
   <ul class="errors"></ul>
-  Segur que vols eliminar <b><%= @product.name %></b>?
+  Segur que vols eliminar <b><%= @animal.name %></b>?
   </div>
   <div class="modal-footer">
-    <%= link_to "Si, elimina aquest animal", product_path(@product), method: :delete, remote: true, class: "btn btn-danger" %>
+    <%= link_to "Si, elimina aquest animal", animal_path(@animal), method: :delete, remote: true, class: "btn btn-danger" %>
     <%= link_to "No, no l'eliminis", "#", class: "btn btn-default", data: { dismiss: "modal" } %>
   </div>
   </div>
