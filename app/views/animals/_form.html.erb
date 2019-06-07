@@ -5,9 +5,9 @@
       <div class="modal-body">
       <ul class="errors"></ul>
 
-      <% if animal.animal_photo.present? %>
+      <% if @animal.animal_photo.present? %>
 
-        <%= image_tag(animal.animal_photo.url, height: 200) %>
+        <%= image_tag(@animal.animal_photo.url, height: 200) %>
 
         <div class="form-group">
 

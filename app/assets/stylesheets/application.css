@@ -40,3 +40,7 @@ th, td {
 .create-new {
   float: right;
 }
+
+.modal-header {
+  background: #fff;
+}

@@ -63,7 +63,7 @@ class AnimalsController < ApplicationController
   end
 
   def delete
-    @animal = Animal.find(params[:product_id])
+    @animal = Animal.find(params[:animal_id])
   end
 
   # DELETE /animals/1
