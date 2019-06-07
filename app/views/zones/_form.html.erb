@@ -1,37 +1,34 @@
-<%= form_with(model: zone, local: true) do |form| %>
-  <% if zone.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(zone.errors.count, "error") %> prohibited this zone from being saved:</h2>
+<div class="modal-dialog">
+  <div class="modal-content">
 
-      <ul>
-      <% zone.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= form_for @zone, remote: true, html: { style: "display:inline;" } do |form| %>
+  <div class="modal-body">
+    <ul class="errors"></ul>
+
+    <div class="form-group">
+      <%= form.label :name, class: "control-label" %>
+      <%= form.text_field :name, class: "form-control" %>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+    <div class="form-group">
+      <%= form.label :weather, class: "control-label" %>
+      <%= form.text_field :weather, class: "form-control" %>
+    </div>
 
-  <div class="field">
-    <%= form.label :weather %>
-    <%= form.text_field :weather %>
-  </div>
+    <div class="form-group">
+      <%= form.label :temperature, class: "control-label" %>
+      <%= form.number_field :temperature, class: "form-control" %>
+    </div>
 
-  <div class="field">
-    <%= form.label :temperature %>
-    <%= form.number_field :temperature %>
-  </div>
+    <div class="form-group">
+      <%= form.label :humidity, class: "control-label" %>
+      <%= form.number_field :humidity, class: "form-control" %>
+    </div>
 
-  <div class="field">
-    <%= form.label :humidity %>
-    <%= form.number_field :humidity %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+    <div class="actions">
+      <%= form.submit class: "btn btn-primary" %>
+    </div>
   </div>
 <% end %>
+</div>
+</div>

@@ -1,0 +1,9 @@
+$("ul.errors").html("")
+<% if @zone.errors.any? %>
+  <% @zone.errors.full_messages.each do |message| %>
+    $("ul.errors").append($("<li />").html("<%= message.html_safe %>"))
+  <% end %>
+<% else %>
+  $(".zone-index").html("<%= escape_javascript(render 'index') %>")
+  $("#zone-modal").modal("hide")
+<% end %>

@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to 'New Zone', new_zone_path, remote: true, class: "btn btn-success create-new" %>
+
 <h1>Zones</h1>
+
+<br><br><br>
 
 <table>
   <thead>
@@ -14,20 +18,8 @@
   </thead>
 
   <tbody>
-    <% @zones.each do |zone| %>
-      <tr>
-        <td><%= zone.name %></td>
-        <td><%= zone.weather %></td>
-        <td><%= zone.temperature %></td>
-        <td><%= zone.humidity %></td>
-        <td><%= link_to 'Show', zone, class: "btn btn-default" %></td>
-        <td><%= link_to 'Edit', edit_zone_path(zone), class: "btn btn-primary" %></td>
-        <td><%= link_to 'Destroy', zone, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
-      </tr>
-    <% end %>
+    <%= render "index" %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Zone', new_zone_path, class: "btn btn-success" %>
+<div id="zone-modal" class="modal fade"></div>
