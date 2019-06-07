@@ -16,6 +16,9 @@ AJAX CRUD
 
 API ligera
 <br>
+[https://paweljw.github.io/2017/07/rails-5.1-api-app-part-3-api-versioning/](https://paweljw.github.io/2017/07/rails-5.1-api-app-part-3-api-versioning/)
+[https://github.com/paweljw/bookstore-backend/tree/part-3](https://github.com/paweljw/bookstore-backend/tree/part-3)
+[https://github.com/paweljw/bookstore-backend/blob/part-3/app/controllers/api/v1/authors_controller.rb](https://github.com/paweljw/bookstore-backend/blob/part-3/app/controllers/api/v1/authors_controller.rb)
 [https://github.com/paweljw/bookstore-backend/blob/part-3/config/routes.rb](https://github.com/paweljw/bookstore-backend/blob/part-3/config/routes.rb)
 
 Search con AJAX

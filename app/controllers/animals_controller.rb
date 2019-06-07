@@ -44,7 +44,7 @@ class AnimalsController < ApplicationController
   end
 
   # PATCH/PUT /animals/1
-  # PATCH/PUT /animals/1.json
+# PATCH/PUT /animals/1.json
   def update
     @animals = Animal.all
     @animal = Animal.find(params[:id])
